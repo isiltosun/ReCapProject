@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,9 @@ namespace DataAccess.Concrete.InMemory
             return _cars;
         }
 
-        public Car GetById(int id)
+     
+
+        public List<CarDetailDTO> GetCarDetails()
         {
             throw new NotImplementedException();
         }
