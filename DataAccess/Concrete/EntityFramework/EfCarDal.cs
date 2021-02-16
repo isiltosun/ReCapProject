@@ -33,14 +33,6 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
        
-        public Car GetCarsByBrandId(int brandId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Car GetCarsByColorId(int colorId)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
