@@ -9,7 +9,7 @@ namespace Business.Abstract
 {
     public  interface IUserService
     {
-        List<User> GetAll();
+        IDataResult<List<User>> GetAll();
         IDataResult<List<UserDetailDTO>> GetUserDetails();
     }
 }

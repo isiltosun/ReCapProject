@@ -16,14 +16,14 @@ namespace Business.Concrete
         {
             _rentalDal = rentalDal; ;
         }
-        public List<Rental> GetAll()
+        public IDataResult<List<Rental>> GetAll()
         {
-            return _rentalDal.GetAll();
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
         }
 
-        public List<Rental> GetById(int id)
+        public IDataResult<List<Rental>> GetById(int id)
         {
-            return _rentalDal.GetAll(r => r.Id == id);
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(r => r.Id == id));
         }
 
         public IResult Add(Rental rental)

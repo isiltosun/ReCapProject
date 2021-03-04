@@ -16,9 +16,9 @@ namespace Business.Concrete
         {
             _userDal = userDal;
         }
-        public List<User> GetAll()
+        public IDataResult<List<User>> GetAll()
         {
-            return _userDal.GetAll();
+            return new SuccessDataResult<List<User>>(_userDal.GetAll());
         }
          
         public IDataResult<List<UserDetailDTO>> GetUserDetails()
